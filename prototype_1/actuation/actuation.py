@@ -25,129 +25,129 @@ GPIO.setup(STEP, GPIO.OUT)
 
 delay = 0.0001
 step_count = SPR
-int i = 0
+int i = 0 #counter to keep stepper motor running for fixed angle output
 def backward():
-	while i<400:#Backward
-	    GPIO.output(DIR1, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP1, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP1, GPIO.LOW)
-	        time.sleep(delay)
+    while i<400:#Backward
+        GPIO.output(DIR1, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP1, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP1, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR2, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP2, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP2, GPIO.LOW)
-	        time.sleep(delay)
+        GPIO.output(DIR2, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP2, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP2, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR3, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP3, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP3, GPIO.LOW)
-	        time.sleep(delay)
-	
-	    GPIO.output(DIR4, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP4, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP4, GPIO.LOW)
-        	time.sleep(delay)
+        GPIO.output(DIR3, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP3, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP3, GPIO.LOW)
+            time.sleep(delay)
+    
+        GPIO.output(DIR4, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP4, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP4, GPIO.LOW)
+            time.sleep(delay)
         i = i+1
 
 def forward():
-	while i<400:#Forward
-	    GPIO.output(DIR1, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP1, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP1, GPIO.LOW)
-	        time.sleep(delay)
+    while i<400:#Forward
+        GPIO.output(DIR1, CW)
+        for x in range(step_count):
+            GPIO.output(STEP1, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP1, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR2, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP2, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP2, GPIO.LOW)
-	        time.sleep(delay)
+        GPIO.output(DIR2, CW)
+        for x in range(step_count):
+            GPIO.output(STEP2, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP2, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR3, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP3, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP3, GPIO.LOW)
-	        time.sleep(delay)
+        GPIO.output(DIR3, CW)
+        for x in range(step_count):
+            GPIO.output(STEP3, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP3, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR4, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP4, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP4, GPIO.LOW)
-	        time.sleep(delay)
-	    i =i+1
+        GPIO.output(DIR4, CW)
+        for x in range(step_count):
+            GPIO.output(STEP4, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP4, GPIO.LOW)
+            time.sleep(delay)
+        i =i+1
 
 def right():
-	while i<400:#Right
-	    GPIO.output(DIR1, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP1, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP1, GPIO.LOW)
-	        time.sleep(delay)
+    while i<400:#Right
+        GPIO.output(DIR1, CW)
+        for x in range(step_count):
+            GPIO.output(STEP1, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP1, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR2, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP2, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP2, GPIO.LOW)
-	        time.sleep(delay)
+        GPIO.output(DIR2, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP2, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP2, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR3, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP3, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP3, GPIO.LOW)
-	        time.sleep(delay)
+        GPIO.output(DIR3, CW)
+        for x in range(step_count):
+            GPIO.output(STEP3, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP3, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR4, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP4, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP4, GPIO.LOW)
-        	time.sleep(delay)
+        GPIO.output(DIR4, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP4, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP4, GPIO.LOW)
+            time.sleep(delay)
         i = i+1
 
 def left():
-	while i<400:#Left
-	    GPIO.output(DIR1, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP1, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP1, GPIO.LOW)
-	        time.sleep(delay)
+    while i<400:#Left
+        GPIO.output(DIR1, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP1, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP1, GPIO.LOW)
+            time.sleep(delay)
+    
+        GPIO.output(DIR2, CW)
+        for x in range(step_count):
+            GPIO.output(STEP2, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP2, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR2, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP2, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP2, GPIO.LOW)
-	        time.sleep(delay)
+        GPIO.output(DIR3, CCW)
+        for x in range(step_count):
+            GPIO.output(STEP3, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP3, GPIO.LOW)
+            time.sleep(delay)
 	
-	    GPIO.output(DIR3, CCW)
-	    for x in range(step_count):
-	        GPIO.output(STEP3, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP3, GPIO.LOW)
-	        time.sleep(delay)
-	
-	    GPIO.output(DIR4, CW)
-	    for x in range(step_count):
-	        GPIO.output(STEP4, GPIO.HIGH)
-	        time.sleep(delay)
-	        GPIO.output(STEP4, GPIO.LOW)
-        	time.sleep(delay)
+        GPIO.output(DIR4, CW)
+        for x in range(step_count):
+            GPIO.output(STEP4, GPIO.HIGH)
+            time.sleep(delay)
+            GPIO.output(STEP4, GPIO.LOW)
+            time.sleep(delay)
         i = i+1
 
 def CommandCallback(commandMessage):
@@ -162,21 +162,21 @@ def CommandCallback(commandMessage):
         backward()
         i=0
     elif command == "\"move_left\"":
-    	print('Moving left')
-    	left()
-    	i=0
+        print('Moving left')
+        left()
+        i=0
     elif command == "\"move_right\"":
         print('moving right')
         right()        
         i=0
         
 def listener():
-	rospy.init_node('Actuator',anonymous=True)
-	rospy.Subscriber('movement_cmd', String, CommandCallback)
-	rospy.spin()
+    rospy.init_node('Actuator',anonymous=True)
+    rospy.Subscriber('movement_cmd', String, CommandCallback)
+    rospy.spin()
 print('Shutting down : Stopping motors')
 
 GPIO.cleanup()
 
 if __name__ == '__main__':
-	listener()
+    listener()
